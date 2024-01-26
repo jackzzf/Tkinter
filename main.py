@@ -135,7 +135,7 @@ class Application(Frame):
     def destroy(self):
         """重写destroy方法"""
         super().destroy()
-        quit()
+        plt.close('all')
 
     def quit(self):
         """点击退出按钮时调用这个函数"""
@@ -143,8 +143,8 @@ class Application(Frame):
         #     print(i)  # 输出键
         #     print(self.children[i])  # 输出值
         #     print()
-        root.quit()  # 结束主循环
         root.destroy()  # 销毁窗口
+        root.quit()  # 结束主循环
 
 
 if __name__ == '__main__':
